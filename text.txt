@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="km" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KLC_2C SHOP.COM - ហាងទិញកាក់ហ្គេមអនឡាញ</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Hanuman & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Hanuman', 'sans-serif'],
+                        khmer: ['Hanuman', 'sans-serif']
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef6ff',
+                            100: '#d9ecff',
+                            500: '#0066ff',
+                            600: '#0052cc',
+                            700: '#003d99',
+                            900: '#001a4d',
+                            dark: '#0a0f1d',
+                            card: '#131c31'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', 'Hanuman', sans-serif;
+            background-color: #080c14;
+            color: #f1f5f9;
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px rgba(0, 102, 255, 0.35);
+        }
+        .glow-card:hover {
+            box-shadow: 0 0 20px rgba(0, 102, 255, 0.5);
+            transform: translateY(-3px);
+            transition: all 0.3s ease;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080c14;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0066ff;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-brand-dark/90 backdrop-blur-md border-b border-blue-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo & Brand (Triple click to open Admin) -->
+            <div id="logoTrigger" class="flex items-center space-x-3 cursor-pointer select-none group" title="ចុច ៣ ដង ដើម្បីចូល Admin Panel">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-600 to-cyan-400 p-0.5 glow-effect group-hover:scale-105 transition-transform">
+                    <div class="w-full h-full bg-brand-dark rounded-[14px] flex items-center justify-center">
+                        <i class="fa-solid fa-gamepad text-cyan-400 text-xl"></i>
+                    </div>
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-black tracking-wider bg-gradient-to-r from-blue-400 via-cyan-300 to-white bg-clip-text text-transparent">
+                        KLC_2C SHOP.COM
+                    </span>
+                    <span class="block text-[10px] text-blue-400 tracking-widest uppercase font-semibold">Official Gaming Top-Up</span>
+                </div>
+            </div>
+
+            <!-- Right Actions -->
+            <div class="flex items-center space-x-3 sm:space-x-4">
+                <a href="https://t.me/KLC_2C_Shop" target="_blank" class="hidden sm:flex items-center space-x-2 bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/30 px-4 py-2 rounded-xl text-blue-300 text-sm font-medium transition-all">
+                    <i class="fa-brands fa-telegram text-cyan-400 text-lg"></i>
+                    <span>Telegram</span>
+                </a>
+                <a href="https://facebook.com/" target="_blank" class="hidden sm:flex items-center space-x-2 bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/30 px-4 py-2 rounded-xl text-blue-300 text-sm font-medium transition-all">
+                    <i class="fa-brands fa-facebook text-blue-400 text-lg"></i>
+                    <span>Facebook</span>
+                </a>
+                <button onclick="openAdminLogin()" class="bg-gradient-to-r from-brand-600 to-cyan-500 hover:from-brand-500 hover:to-cyan-400 text-white px-4 py-2 rounded-xl text-sm font-bold shadow-lg shadow-blue-500/25 flex items-center space-x-2 transition-all">
+                    <i class="fa-solid fa-lock text-xs"></i>
+                    <span class="hidden md:inline">Admin Panel</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+
+        <!-- Hero Banner -->
+        <div class="relative rounded-3xl overflow-hidden bg-gradient-to-r from-blue-900/40 via-brand-card to-blue-950/60 border border-blue-500/20 p-6 sm:p-10 mb-10 glow-effect">
+            <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="relative z-10 max-w-2xl">
+                <span class="inline-block bg-blue-500/20 text-cyan-300 border border-cyan-500/30 text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                    ✨ ទូទាត់សុវត្ថិភាព ស្វ័យប្រវត្តិ ២៤/៧
+                </span>
+                <h1 class="text-3xl sm:text-5xl font-black tracking-tight mb-4 font-khmer text-white">
+                    ទិញកាក់ហ្គេម និងកញ្ចប់ VIP យ៉ាងងាយស្រួល
+                </h1>
+                <p class="text-slate-300 text-sm sm:text-base mb-6 leading-relaxed">
+                    ជ្រើសរើសហ្គេម បញ្ចូលអាយឌី ស្កេន QR បង់ប្រាក់ និងផ្ទុកវិក្កយបត្រដើម្បីផ្ទៀងផ្ទាត់ទទួលកាក់ភ្លាមៗ។
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="#gamesSection" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-6 py-3 rounded-2xl shadow-lg shadow-cyan-500/30 transition-all flex items-center space-x-2">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>ចាប់ផ្តើមទិញឥឡូវនេះ</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Games Selection Section -->
+        <div id="gamesSection" class="mb-8">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold font-khmer flex items-center space-x-3">
+                    <span class="w-2.5 h-8 bg-cyan-400 rounded-full"></span>
+                    <span>ជ្រើសរើសហ្គេម (Select Game)</span>
+                </h2>
+                <span class="text-xs text-slate-400">ហ្គេមផ្លូវការណ៍ ១០០%</span>
+            </div>
+
+            <!-- Games Grid -->
+            <div id="gamesGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+
+        <!-- Selected Game Store Panel -->
+        <div id="storePanel" class="hidden mt-8 transition-all">
+            <div class="bg-brand-card/90 backdrop-blur border border-blue-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+                <!-- Game Header Info -->
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b border-blue-900/40 mb-8">
+                    <div class="flex items-center space-x-4">
+                        <img id="activeGameLogo" src="" alt="Game Logo" class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover border-2 border-cyan-400/50 shadow-lg">
+                        <div>
+                            <span id="activeGameCategory" class="text-xs font-bold uppercase tracking-wider text-cyan-400 bg-cyan-950/80 px-2.5 py-1 rounded-md border border-cyan-500/30"></span>
+                            <h3 id="activeGameTitle" class="text-2xl sm:text-3xl font-extrabold mt-1 text-white"></h3>
+                        </div>
+                    </div>
+                    <button onclick="closeStorePanel()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-4 py-2 rounded-xl text-sm font-semibold transition-all">
+                        <i class="fa-solid fa-arrow-left mr-2"></i> ត្រឡប់ក្រោយ
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Left & Center: Player Info & Packages -->
+                    <div class="lg:col-span-2 space-y-6">
+                        
+                        <!-- Step 1: User ID -->
+                        <div class="bg-slate-900/60 p-5 rounded-2xl border border-blue-900/40">
+                            <label class="block text-sm font-semibold text-cyan-300 mb-2 flex items-center space-x-2">
+                                <span class="w-6 h-6 rounded-full bg-cyan-500 text-slate-950 flex items-center justify-center text-xs font-bold">1</span>
+                                <span id="userIdLabel">បញ្ចូលអាយឌីហ្គេម (Game User ID)</span>
+                            </label>
+                            <div class="relative">
+                                <input type="text" id="playerIdInput" placeholder="ឧទាហរណ៍: 123456789" class="w-full bg-slate-950 border border-blue-500/30 focus:border-cyan-400 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none transition-all">
+                                <button type="button" onclick="verifyPlayerId()" class="absolute right-2 top-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-1.5 rounded-lg text-xs font-bold transition-all">
+                                    စစ်ဆေး (Verify)
+                                </button>
+                            </div>
+                            <p id="playerVerifyResult" class="text-xs text-emerald-400 mt-2 hidden">
+                                <i class="fa-solid fa-circle-check mr-1"></i> រកឃើញគណនី: <span class="font-bold underline">Vanny Vin (VIP Player)</span>
+                            </p>
+
+                            <!-- Roblox 3D Avatar Preview Container -->
+                            <div id="robloxPreviewContainer" class="hidden mt-4 p-4 rounded-xl bg-slate-950/80 border border-cyan-500/25 flex items-center space-x-4">
+                                <div class="w-16 h-16 rounded-xl bg-gradient-to-tr from-purple-600 to-cyan-500 p-0.5 flex-shrink-0">
+                                    <div class="w-full h-full bg-slate-900 rounded-[10px] flex items-center justify-center overflow-hidden">
+                                        <i class="fa-solid fa-cube text-3xl text-cyan-300 animate-pulse"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs uppercase font-bold text-cyan-400">Roblox 3D Avatar Headshot Preview</h4>
+                                    <p class="text-sm font-semibold text-white mt-0.5" id="robloxUsernameDisplay">Player_Roblox_Pro</p>
+                                    <span class="inline-block mt-1 text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded">Status: Online (3D Verified)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Select Package -->
+                        <div>
+                            <label class="block text-sm font-semibold text-cyan-300 mb-3 flex items-center space-x-2">
+                                <span class="w-6 h-6 rounded-full bg-cyan-500 text-slate-950 flex items-center justify-center text-xs font-bold">2</span>
+                                <span>ជ្រើសរើសកញ្ចប់កាក់ (Select Package)</span>
+                            </label>
+                            <div id="packagesGrid" class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+                                <!-- Packages injected here -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column: Summary & Payment Action -->
+                    <div class="bg-slate-900/80 p-6 rounded-2xl border border-blue-900/50 flex flex-col justify-between h-fit">
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-4 flex items-center space-x-2">
+                                <i class="fa-solid fa-receipt text-cyan-400"></i>
+                                <span>ព័ត៌មានការទូទាត់ (Summary)</span>
+                            </h4>
+
+                            <div class="space-y-3 text-sm border-b border-blue-900/40 pb-4 mb-4">
+                                <div class="flex justify-between text-slate-400">
+                                    <span>ហ្គេម:</span>
+                                    <span id="summaryGameName" class="font-bold text-white">-</span>
+                                </div>
+                                <div class="flex justify-between text-slate-400">
+                                    <span>កញ្ចប់:</span>
+                                    <span id="summaryPackageName" class="font-bold text-cyan-300">សូមជ្រើសរើសកញ្ចប់</span>
+                                </div>
+                                <div class="flex justify-between text-slate-400">
+                                    <span>អាយឌី (ID):</span>
+                                    <span id="summaryPlayerId" class="font-bold text-white">-</span>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center mb-6">
+                                <span class="text-slate-300 font-semibold">សរុបទឹកប្រាក់:</span>
+                                <div class="text-right">
+                                    <div id="summaryPriceUSD" class="text-2xl font-black text-cyan-400">$0.00</div>
+                                    <div id="summaryPriceKHR" class="text-xs text-slate-400">0 ៛</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button id="topUpNowBtn" onclick="triggerCheckout()" disabled class="w-full bg-slate-800 text-slate-500 font-bold py-3.5 rounded-xl cursor-not-allowed transition-all flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-qrcode text-lg"></i>
+                            <span>TOP UP NOW (ទូទាត់ប្រាក់)</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-blue-900/30 mt-16 py-8 text-center text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 space-y-3">
+            <p class="font-bold text-slate-300">© 2026 KLC_2C SHOP.COM. រក្សាសិទ្ធិគ្រប់យ៉ាងដោយផ្នែកជំនួយអតិថិជន ២៤ម៉ោង។</p>
+            <div class="flex justify-center space-x-6 text-sm">
+                <a href="https://t.me/KLC_2C_Shop" target="_blank" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-telegram mr-1"></i> Telegram Channel</a>
+                <a href="https://facebook.com/" target="_blank" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-facebook mr-1"></i> Facebook Page</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ABA KHQR Payment & Receipt Upload Modal -->
+    <div id="paymentModal" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-sm hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-brand-card border border-blue-500/40 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative my-auto">
+            <div class="text-center">
+                <div class="w-12 h-12 bg-blue-600/20 border border-blue-500/30 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                    <i class="fa-solid fa-qrcode text-cyan-400 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-black text-white">ABA KHQR Payment & Verification</h3>
+                <p class="text-xs text-cyan-400 mt-1">ស្កេន QR កូដខាងក្រោម បាញ់លុយ រួច Upload វិក្កយបត្រដើម្បីផ្ទៀងផ្ទាត់</p>
+
+                <!-- QR Code Display -->
+                <div class="my-4 p-3 bg-white rounded-2xl inline-block shadow-inner">
+                    <img id="modalQrImage" src="" alt="ABA KHQR" class="w-48 h-48 sm:w-56 sm:h-56 object-contain mx-auto rounded-lg">
+                </div>
+
+                <!-- Payment Details -->
+                <div class="bg-slate-900/80 p-3 rounded-xl border border-blue-900/40 text-left text-xs space-y-1 mb-5">
+                    <div class="flex justify-between"><span class="text-slate-400">ឈ្មោះម្ចាស់គណនី:</span> <span id="qrMerchantName" class="font-bold text-white">VANNY VIN</span></div>
+                    <div class="flex justify-between"><span class="text-slate-400">លេខគណនី KHR:</span> <span id="qrAccountKHR" class="font-bold text-cyan-300">015 145 148</span></div>
+                    <div class="flex justify-between"><span class="text-slate-400">លេខគណនី USD:</span> <span id="qrAccountUSD" class="font-bold text-cyan-300">015 145 147</span></div>
+                    <div class="flex justify-between pt-2 border-t border-slate-800"><span class="text-slate-300 font-bold">ទឹកប្រាក់ត្រូវបង់:</span> <span id="modalTotalAmount" class="font-black text-cyan-400 text-sm">$0.00</span></div>
+                </div>
+
+                <!-- Receipt Upload Section for Validation -->
+                <div class="bg-slate-950 p-4 rounded-2xl border border-cyan-500/30 text-left mb-6">
+                    <label class="block text-xs font-bold text-cyan-300 mb-2">
+                        <i class="fa-solid fa-file-arrow-up mr-1"></i> បញ្ចូលរូបភាពវិក្កយបត្របង់ប្រាក់ (Upload Receipt):
+                    </label>
+                    <input type="file" id="receiptFileInput" accept="image/*" onchange="previewReceiptUpload(event)" class="w-full text-xs text-slate-400 file:mr-2 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-cyan-500 file:text-slate-950 hover:file:bg-cyan-400 cursor-pointer">
+                    
+                    <div id="receiptPreviewBox" class="mt-3 hidden text-center">
+                        <img id="receiptPreviewImg" src="" alt="Receipt Preview" class="max-h-32 mx-auto rounded-lg border border-slate-700 mb-2">
+                        <span class="text-[11px] text-emerald-400"><i class="fa-solid fa-circle-check"></i> បានផ្ទុកវិក្កយបត្ររួចរាល់ ត្រៀមផ្ទៀងផ្ទាត់</span>
+                    </div>
+                </div>
+
+                <div class="flex space-x-3">
+                    <button onclick="closePaymentModal()" class="w-1/2 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-3 rounded-xl text-xs transition-all">
+                        បោះបង់
+                    </button>
+                    <button id="verifyReceiptBtn" onclick="verifyAndClaimOrder()" disabled class="w-1/2 bg-slate-800 text-slate-500 font-bold py-3 rounded-xl text-xs cursor-not-allowed transition-all shadow-lg">
+                        <i class="fa-solid fa-shield-check mr-1"></i> ផ្ទៀងផ្ទាត់ និង ទទួលយក (Claim)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Order & Direct Chat Modal -->
+    <div id="successModal" class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-brand-card border border-emerald-500/50 rounded-3xl max-w-md w-full p-6 sm:p-8 text-center shadow-2xl">
+            <div class="w-16 h-16 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 animate-bounce">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-black text-white mb-1">ផ្ទៀងផ្ទាត់វិក្កយបត្រត្រូវ!»</h3>
+            <p class="text-xs text-emerald-400 mb-6">វិក្កយបត្រត្រឹមត្រូវ ពេលវេលា និងឈ្មោះត្រូវគ្នា។ សូមចុចប៊ូតុងខាងក្រោមដើម្បីផ្ញើព័ត៌មានទៅកាន់ហាង!</p>
+            
+            <div class="bg-slate-900 p-4 rounded-2xl text-left text-xs space-y-2 mb-6 border border-slate-800 font-mono">
+                <div class="flex justify-between"><span class="text-slate-400">ហ្គេម:</span> <span id="successGame" class="font-bold text-white">-</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">កញ្ចប់:</span> <span id="successPackage" class="font-bold text-cyan-300">-</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">អាយឌីអតិថិជន:</span> <span id="successPlayerId" class="font-bold text-white">-</span></div>
+                <div class="flex justify-between"><span class="text-slate-400">ស្ថានភាព:</span> <span class="font-bold text-emerald-400">Verified & Ready</span></div>
+            </div>
+
+            <!-- Direct Chat Actions with Auto-Copy -->
+            <div class="space-y-3">
+                <p class="text-[11px] text-cyan-300">ព័ត៌មានត្រូវបានរកទុកក្នុង Clipboard រួចរាល់!</p>
+                <div class="grid grid-cols-2 gap-3">
+                    <a id="telegramChatBtn" href="https://t.me/KLC_2C_Shop" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-4 rounded-xl text-xs flex items-center justify-center space-x-2 shadow-lg shadow-blue-600/30 transition-all">
+                        <i class="fa-brands fa-telegram text-base"></i>
+                        <span>ឆាតទៅ Telegram</span>
+                    </a>
+                    <a id="facebookChatBtn" href="https://facebook.com/" target="_blank" class="bg-blue-700 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-xl text-xs flex items-center justify-center space-x-2 shadow-lg shadow-blue-700/30 transition-all">
+                        <i class="fa-brands fa-facebook text-base"></i>
+                        <span>ឆាតទៅ Facebook</span>
+                    </a>
+                </div>
+                <button onclick="closeSuccessModal()" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-2.5 rounded-xl text-xs mt-2">
+                    បិទបង្អួចនេះ
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Secret Admin Login Modal -->
+    <div id="adminLoginModal" class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-brand-card border border-blue-500/40 rounded-3xl max-w-sm w-full p-6 shadow-2xl relative">
+            <h3 class="text-xl font-black text-white mb-1 flex items-center space-x-2">
+                <i class="fa-solid fa-shield-halved text-cyan-400"></i>
+                <span>Admin Login</span>
+            </h3>
+            <p class="text-xs text-slate-400 mb-6">សូមបញ្ចូលលេខសម្ងាត់ (លេខសម្ងាត់ដើម: 12345)</p>
+
+            <form onsubmit="handleAdminLogin(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Password</label>
+                    <input type="password" id="adminPasswordInput" placeholder="•••••" required class="w-full bg-slate-950 border border-blue-500/30 focus:border-cyan-400 rounded-xl px-4 py-3 text-white focus:outline-none text-center tracking-widest text-lg">
+                </div>
+                <div class="flex space-x-3 pt-2">
+                    <button type="button" onclick="closeAdminLogin()" class="w-1/2 bg-slate-800 text-slate-300 font-bold py-2.5 rounded-xl text-xs">បោះបង់</button>
+                    <button type="submit" class="w-1/2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold py-2.5 rounded-xl text-xs shadow-lg shadow-cyan-500/20">ចូល Admin</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel Dashboard Modal -->
+    <div id="adminPanelModal" class="fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-lg hidden flex flex-col overflow-y-auto">
+        <div class="max-w-6xl mx-auto w-full p-4 sm:p-6 my-auto">
+            <div class="bg-brand-card border border-blue-500/50 rounded-3xl shadow-2xl overflow-hidden">
+                
+                <!-- Admin Header -->
+                <div class="bg-slate-900 p-6 border-b border-blue-900/40 flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-cyan-500/20 text-cyan-400 rounded-xl flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-gauge"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-black text-white">KLC_2C SHOP - Admin Control Panel</h2>
+                            <p class="text-xs text-cyan-400">គ្រប់គ្រង QR Code និងកញ្ចប់តម្លៃហ្គេម</p>
+                        </div>
+                    </div>
+                    <button onclick="closeAdminPanel()" class="bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/30 px-4 py-2 rounded-xl text-xs font-bold transition-all">
+                        <i class="fa-solid fa-xmark mr-1"></i> ចាកចេញ
+                    </button>
+                </div>
+
+                <!-- Admin Tabs / Content -->
+                <div class="p-6 sm:p-8 space-y-8">
+                    
+                    <!-- Section 1: Payment & QR Code Manager -->
+                    <div class="bg-slate-900/70 p-6 rounded-2xl border border-cyan-500/30 shadow-lg">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center text-sm font-bold">
+                                <i class="fa-solid fa-qrcode"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">គ្រប់គ្រង QR Code និងគណនី ABA</h3>
+                                <p class="text-xs text-slate-400">อਪໂລដរូបភាព QR ថ្មីពីអាលប៊ុមរបស់អ្នក</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                            <div class="text-center bg-slate-950 p-4 rounded-xl border border-blue-900/40">
+                                <img id="adminCurrentQrPreview" src="" alt="QR Preview" class="w-40 h-40 object-contain mx-auto rounded-lg mb-3 bg-white p-1">
+                                <label class="block text-xs font-semibold text-cyan-300 mb-2">ជ្រើសរើសរូបភាព QR ថ្មី:</label>
+                                <input type="file" id="qrImageFileInput" accept="image/*" onchange="previewNewQrUpload(event)" class="w-full text-xs text-slate-400 file:mr-2 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-cyan-500 file:text-slate-950 hover:file:bg-cyan-400 cursor-pointer">
+                            </div>
+
+                            <div class="md:col-span-2 space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 mb-1">ឈ្មោះម្ចាស់គណនី</label>
+                                        <input type="text" id="adminMerchantNameInput" class="w-full bg-slate-950 border border-blue-500/30 rounded-xl px-3 py-2 text-white text-sm">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 mb-1">លេខគណនី KHR</label>
+                                        <input type="text" id="adminAccountKHRInput" class="w-full bg-slate-950 border border-blue-500/30 rounded-xl px-3 py-2 text-white text-sm">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">លេខគណនី USD</label>
+                                    <input type="text" id="adminAccountUSDInput" class="w-full bg-slate-950 border border-blue-500/30 rounded-xl px-3 py-2 text-white text-sm">
+                                </div>
+                                <button onclick="savePaymentSettings()" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-6 py-2.5 rounded-xl text-xs transition-all shadow-lg shadow-cyan-500/25">
+                                    <i class="fa-solid fa-floppy-disk mr-1"></i> រក្សាទុកការផ្លាស់ប្តូរ QR & Payment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Game Packages Manager -->
+                    <div class="bg-slate-900/70 p-6 rounded-2xl border border-blue-900/40">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center text-sm font-bold">
+                                    <i class="fa-solid fa-gamepad"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">គ្រប់គ្រងកញ្ចប់តម្លៃហ្គេម</h3>
+                                    <p class="text-xs text-slate-400">កែប្រែឈ្មោះកញ្ចប់ និងតម្លៃ</p>
+                                </div>
+                            </div>
+                            <select id="adminGameSelector" onchange="loadAdminPackagesForGame()" class="bg-slate-950 border border-blue-500/30 text-white text-xs rounded-xl px-3 py-2 focus:outline-none">
+                                <!-- Populated dynamically -->
+                            </select>
+                        </div>
+
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-xs text-slate-300">
+                                <thead class="bg-slate-950 text-cyan-400 uppercase font-semibold">
+                                    <tr>
+                                        <th class="p-3">ឈ្មោះកញ្ចប់</th>
+                                        <th class="p-3">តម្លៃ ($ USD)</th>
+                                        <th class="p-3">តម្លៃ (KHR)</th>
+                                        <th class="p-3 text-center">សកម្មភាព</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="adminPackagesTableBody" class="divide-y divide-blue-900/30">
+                                    <!-- Injected by JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        let storeData = {
+            payment: {
+                merchantName: "VANNY VIN",
+                accountKHR: "015 145 148",
+                accountUSD: "015 145 147",
+                qrImage: "https://heng-visal.github.io/hosted-images/aba-qr.png"
+            },
+            games: [
+                {
+                    id: 'roblox',
+                    name: 'Roblox',
+                    category: 'Robux & VIP',
+                    logo: 'https://placehold.co/120x120/0066ff/ffffff?text=Roblox',
+                    packages: [
+                        { id: 'r1', name: '80 Robux', usd: 0.99, khr: '4,000 ៛' },
+                        { id: 'r2', name: '400 Robux', usd: 4.99, khr: '20,000 ៛' },
+                        { id: 'r3', name: '800 Robux', usd: 9.99, khr: '40,000 ៛' },
+                        { id: 'r4', name: '1,700 Robux', usd: 19.99, khr: '80,000 ៛' },
+                        { id: 'r5', name: '4,500 Robux', usd: 49.99, khr: '200,000 ៛' },
+                        { id: 'r6', name: '10,000 Robux', usd: 99.99, khr: '400,000 ៛' }
+                    ]
+                },
+                {
+                    id: 'pubg',
+                    name: 'PUBG Mobile',
+                    category: 'Unknown Cash',
+                    logo: 'https://placehold.co/120x120/f59e0b/ffffff?text=PUBG',
+                    packages: [
+                        { id: 'p1', name: '60 UC', usd: 0.99, khr: '4,000 ៛' },
+                        { id: 'p2', name: '325 UC', usd: 4.99, khr: '20,000 ៛' },
+                        { id: 'p3', name: '660 UC', usd: 9.99, khr: '40,000 ៛' },
+                        { id: 'p4', name: '1,800 UC', usd: 24.99, khr: '100,000 ៛' },
+                        { id: 'p5', name: '3,850 UC', usd: 49.99, khr: '200,000 ៛' },
+                        { id: 'p6', name: '8,100 UC', usd: 99.99, khr: '400,000 ៛' }
+                    ]
+                },
+                {
+                    id: 'mlbb',
+                    name: 'Mobile Legends',
+                    category: 'Diamonds',
+                    logo: 'https://placehold.co/120x120/8b5cf6/ffffff?text=MLBB',
+                    packages: [
+                        { id: 'm1', name: '50 Diamonds', usd: 0.99, khr: '4,000 ៛' },
+                        { id: 'm2', name: '250 Diamonds', usd: 4.99, khr: '20,000 ៛' },
+                        { id: 'm3', name: '565 Diamonds', usd: 9.99, khr: '40,000 ៛' },
+                        { id: 'm4', name: '1150 Diamonds', usd: 19.99, khr: '80,000 ៛' },
+                        { id: 'm5', name: '2976 Diamonds', usd: 49.99, khr: '200,000 ៛' },
+                        { id: 'm6', name: '6016 Diamonds', usd: 99.99, khr: '400,000 ៛' }
+                    ]
+                },
+                {
+                    id: 'freefire',
+                    name: 'Free Fire',
+                    category: 'Diamonds',
+                    logo: 'https://placehold.co/120x120/ef4444/ffffff?text=FreeFire',
+                    packages: [
+                        { id: 'f1', name: '100 Diamonds', usd: 0.99, khr: '4,000 ៛' },
+                        { id: 'f2', name: '310 Diamonds', usd: 2.99, khr: '12,000 ៛' },
+                        { id: 'f3', name: '520 Diamonds', usd: 4.99, khr: '20,000 ៛' },
+                        { id: 'f4', name: '1060 Diamonds', usd: 9.99, khr: '40,000 ៛' },
+                        { id: 'f5', name: '2180 Diamonds', usd: 19.99, khr: '80,000 ៛' },
+                        { id: 'f6', name: '5600 Diamonds', usd: 49.99, khr: '200,000 ៛' }
+                    ]
+                },
+                {
+                    id: 'bloxfruits',
+                    name: 'Blox Fruits',
+                    category: 'Gamepass & Fruits',
+                    logo: 'https://placehold.co/120x120/10b981/ffffff?text=BloxFruits',
+                    packages: [
+                        { id: 'b1', name: 'Perm Buddha', usd: 14.99, khr: '60,000 ៛' },
+                        { id: 'b2', name: 'Perm Portal', usd: 19.99, khr: '80,000 ៛' },
+                        { id: 'b3', name: 'Dark Blade', usd: 12.99, khr: '52,000 ៛' },
+                        { id: 'b4', name: '2x Money & Mastery', usd: 9.99, khr: '40,000 ៛' },
+                        { id: 'b5', name: 'Fast Boats', usd: 4.99, khr: '20,000 ៛' },
+                        { id: 'b6', name: 'Stat Reset', usd: 2.99, khr: '12,000 ៛' }
+                    ]
+                }
+            ]
+        };
+
+        let currentSelectedGame = null;
+        let currentSelectedPackage = null;
+        let isPlayerVerified = false;
+        let isReceiptUploaded = false;
+
+        window.onload = function() {
+            renderGamesGrid();
+            setupLogoTripleClick();
+        };
+
+        function renderGamesGrid() {
+            const grid = document.getElementById('gamesGrid');
+            grid.innerHTML = '';
+
+            storeData.games.forEach(game => {
+                const card = document.createElement('div');
+                card.className = 'bg-brand-card/80 border border-blue-900/40 hover:border-cyan-500/50 rounded-3xl p-5 text-center cursor-pointer glow-card transition-all flex flex-col items-center group';
+                card.onclick = () => selectGame(game.id);
+                card.innerHTML = `
+                    <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden mb-4 border-2 border-blue-900 group-hover:border-cyan-400 transition-colors shadow-lg">
+                        <img src="${game.logo}" alt="${game.name}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" onerror="this.src='https://placehold.co/100x100/0066ff/ffffff?text=Game'">
+                    </div>
+                    <span class="text-[11px] text-cyan-400 font-semibold tracking-wider uppercase mb-1">${game.category}</span>
+                    <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-cyan-300">${game.name}</h3>
+                    <span class="mt-3 text-xs bg-blue-600/20 text-blue-300 px-3 py-1.5 rounded-xl font-medium group-hover:bg-cyan-500 group-hover:text-slate-950 transition-colors">
+                        ទិញឥឡូវនេះ <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </span>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function selectGame(gameId) {
+            currentSelectedGame = storeData.games.find(g => g.id === gameId);
+            if (!currentSelectedGame) return;
+
+            document.getElementById('activeGameLogo').src = currentSelectedGame.logo;
+            document.getElementById('activeGameTitle').textContent = currentSelectedGame.name;
+            document.getElementById('activeGameCategory').textContent = currentSelectedGame.category;
+            document.getElementById('summaryGameName').textContent = currentSelectedGame.name;
+
+            currentSelectedPackage = null;
+            isPlayerVerified = false;
+            document.getElementById('playerIdInput').value = '';
+            document.getElementById('playerVerifyResult').classList.add('hidden');
+            document.getElementById('summaryPlayerId').textContent = '-';
+            document.getElementById('summaryPackageName').textContent = 'សូមជ្រើសរើសកញ្ចប់';
+            document.getElementById('summaryPriceUSD').textContent = '$0.00';
+            document.getElementById('summaryPriceKHR').textContent = '0 ៛';
+            document.getElementById('topUpNowBtn').disabled = true;
+            document.getElementById('topUpNowBtn').className = 'w-full bg-slate-800 text-slate-500 font-bold py-3.5 rounded-xl cursor-not-allowed transition-all flex items-center justify-center space-x-2';
+
+            const robloxPreview = document.getElementById('robloxPreviewContainer');
+            if (gameId === 'roblox') {
+                robloxPreview.classList.remove('hidden');
+            } else {
+                robloxPreview.classList.add('hidden');
+            }
+
+            renderPackages();
+
+            const storePanel = document.getElementById('storePanel');
+            storePanel.classList.remove('hidden');
+            storePanel.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function closeStorePanel() {
+            document.getElementById('storePanel').classList.add('hidden');
+            document.getElementById('gamesSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function renderPackages() {
+            const grid = document.getElementById('packagesGrid');
+            grid.innerHTML = '';
+
+            currentSelectedGame.packages.forEach(pkg => {
+                const item = document.createElement('div');
+                item.className = 'package-card bg-slate-950/60 border border-blue-900/50 hover:border-cyan-400 rounded-2xl p-4 text-center cursor-pointer transition-all';
+                item.onclick = () => selectPackage(pkg, item);
+                item.innerHTML = `
+                    <div class="text-base sm:text-lg font-bold text-white mb-1">${pkg.name}</div>
+                    <div class="text-cyan-400 font-black text-lg">$${pkg.usd.toFixed(2)}</div>
+                    <div class="text-[11px] text-slate-400">${pkg.khr}</div>
+                `;
+                grid.appendChild(item);
+            });
+        }
+
+        function selectPackage(pkg, element) {
+            document.querySelectorAll('.package-card').forEach(c => {
+                c.classList.remove('border-cyan-400', 'bg-cyan-950/40', 'glow-effect');
+            });
+            element.classList.add('border-cyan-400', 'bg-cyan-950/40', 'glow-effect');
+
+            currentSelectedPackage = pkg;
+            document.getElementById('summaryPackageName').textContent = pkg.name;
+            document.getElementById('summaryPriceUSD').textContent = `$${pkg.usd.toFixed(2)}`;
+            document.getElementById('summaryPriceKHR').textContent = pkg.khr;
+
+            checkReadyToTopUp();
+        }
+
+        function verifyPlayerId() {
+            const val = document.getElementById('playerIdInput').value.trim();
+            if (!val) {
+                alert('សូមបញ្ចូលអាយឌីហ្គេមរបស់អ្នកជាមុនសិន!');
+                return;
+            }
+            isPlayerVerified = true;
+            document.getElementById('playerVerifyResult').classList.remove('hidden');
+            document.getElementById('summaryPlayerId').textContent = val;
+            checkReadyToTopUp();
+        }
+
+        function checkReadyToTopUp() {
+            const btn = document.getElementById('topUpNowBtn');
+            if (isPlayerVerified && currentSelectedPackage) {
+                btn.disabled = false;
+                btn.className = 'w-full bg-gradient-to-r from-brand-600 to-cyan-500 hover:from-brand-500 hover:to-cyan-400 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-cyan-500/30 transition-all flex items-center justify-center space-x-2 cursor-pointer';
+            }
+        }
+
+        function triggerCheckout() {
+            if (!isPlayerVerified || !currentSelectedPackage) return;
+
+            document.getElementById('modalQrImage').src = storeData.payment.qrImage;
+            document.getElementById('qrMerchantName').textContent = storeData.payment.merchantName;
+            document.getElementById('qrAccountKHR').textContent = storeData.payment.accountKHR;
+            document.getElementById('qrAccountUSD').textContent = storeData.payment.accountUSD;
+            document.getElementById('modalTotalAmount').textContent = `$${currentSelectedPackage.usd.toFixed(2)} (${currentSelectedPackage.khr})`;
+
+            // Reset receipt input
+            document.getElementById('receiptFileInput').value = '';
+            document.getElementById('receiptPreviewBox').classList.add('hidden');
+            isReceiptUploaded = false;
+            updateVerifyBtnState();
+
+            document.getElementById('paymentModal').classList.remove('hidden');
+        }
+
+        function closePaymentModal() {
+            document.getElementById('paymentModal').classList.add('hidden');
+        }
+
+        function previewReceiptUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('receiptPreviewImg').src = e.target.result;
+                    document.getElementById('receiptPreviewBox').classList.remove('hidden');
+                    isReceiptUploaded = true;
+                    updateVerifyBtnState();
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function updateVerifyBtnState() {
+            const btn = document.getElementById('verifyReceiptBtn');
+            if (isReceiptUploaded) {
+                btn.disabled = false;
+                btn.className = 'w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl text-xs shadow-lg shadow-emerald-600/30 cursor-pointer transition-all';
+            } else {
+                btn.disabled = true;
+                btn.className = 'w-full bg-slate-800 text-slate-500 font-bold py-3 rounded-xl text-xs cursor-not-allowed transition-all';
+            }
+        }
+
+        function verifyAndClaimOrder() {
+            if (!isReceiptUploaded) return;
+
+            // Close payment modal
+            document.getElementById('paymentModal').classList.add('hidden');
+
+            const gameName = currentSelectedGame.name;
+            const packageName = currentSelectedPackage.name;
+            const playerId = document.getElementById('playerIdInput').value;
+
+            document.getElementById('successGame').textContent = gameName;
+            document.getElementById('successPackage').textContent = packageName;
+            document.getElementById('successPlayerId').textContent = playerId;
+
+            // Generate clean chat text ready for copying & messaging
+            const chatText = `ជំរាបសួរហាង KLC_2C SHOP.COM! ខ្ញុំបានទូទាត់ប្រាក់រួចរាល់ហើយ:\n- ហ្គេម: ${gameName}\n- កញ្ចប់: ${packageName}\n- អាយឌី: ${playerId}\n- ចំនួនទឹកប្រាក់: $${currentSelectedPackage.usd.toFixed(2)} (${currentSelectedPackage.khr})\nសូមជួយពិនិត្យ និងដាក់កាក់ចូលអាយឌីឲ្យខ្ញុំបាទ/នាងខ្ញុំផង អរគុណច្រើន!`;
+
+            // Copy to clipboard
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = chatText;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            try {
+                document.execCommand('copy');
+            } catch (err) {
+                console.error('Copy failed', err);
+            }
+            document.body.removeChild(tempTextArea);
+
+            // Setup direct redirect links
+            const encodedText = encodeURIComponent(chatText);
+            document.getElementById('telegramChatBtn').href = `https://t.me/KLC_2C_Shop?text=${encodedText}`;
+            document.getElementById('facebookChatBtn').href = `https://m.me/KLC_2C_Shop`;
+
+            document.getElementById('successModal').classList.remove('hidden');
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('successModal').classList.add('hidden');
+            closeStorePanel();
+        }
+
+        // --- SECRET ADMIN PANEL LOGIC ---
+        let logoClickCount = 0;
+        function setupLogoTripleClick() {
+            const trigger = document.getElementById('logoTrigger');
+            trigger.addEventListener('click', () => {
+                logoClickCount++;
+                if (logoClickCount >= 3) {
+                    logoClickCount = 0;
+                    openAdminLogin();
+                }
+                setTimeout(() => { logoClickCount = 0; }, 1500);
+            });
+        }
+
+        function openAdminLogin() {
+            document.getElementById('adminLoginModal').classList.remove('hidden');
+        }
+
+        function closeAdminLogin() {
+            document.getElementById('adminLoginModal').classList.add('hidden');
+            document.getElementById('adminPasswordInput').value = '';
+        }
+
+        function handleAdminLogin(event) {
+            event.preventDefault();
+            const pass = document.getElementById('adminPasswordInput').value;
+            if (pass === '12345') {
+                closeAdminLogin();
+                openAdminPanel();
+            } else {
+                alert('លេខសម្ងាត់មិនត្រឹមត្រូវ! (សូមប្រើ: 12345)');
+            }
+        }
+
+        function openAdminPanel() {
+            document.getElementById('adminCurrentQrPreview').src = storeData.payment.qrImage;
+            document.getElementById('adminMerchantNameInput').value = storeData.payment.merchantName;
+            document.getElementById('adminAccountKHRInput').value = storeData.payment.accountKHR;
+            document.getElementById('adminAccountUSDInput').value = storeData.payment.accountUSD;
+
+            const gameSelector = document.getElementById('adminGameSelector');
+            gameSelector.innerHTML = '';
+            storeData.games.forEach(g => {
+                const opt = document.createElement('option');
+                opt.value = g.id;
+                opt.textContent = g.name;
+                gameSelector.appendChild(opt);
+            });
+
+            loadAdminPackagesForGame();
+            document.getElementById('adminPanelModal').classList.remove('hidden');
+        }
+
+        function closeAdminPanel() {
+            document.getElementById('adminPanelModal').classList.add('hidden');
+        }
+
+        let tempNewQrBase64 = null;
+        function previewNewQrUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    tempNewQrBase64 = e.target.result;
+                    document.getElementById('adminCurrentQrPreview').src = tempNewQrBase64;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function savePaymentSettings() {
+            if (tempNewQrBase64) {
+                storeData.payment.qrImage = tempNewQrBase64;
+            }
+            storeData.payment.merchantName = document.getElementById('adminMerchantNameInput').value;
+            storeData.payment.accountKHR = document.getElementById('adminAccountKHRInput').value;
+            storeData.payment.accountUSD = document.getElementById('adminAccountUSDInput').value;
+
+            alert('បានរក្សាទុកការផ្លាស់ប្តូរ QR Code និងព័ត៌មានទូទាត់ដោយជោគជ័យ!');
+        }
+
+        function loadAdminPackagesForGame() {
+            const gameId = document.getElementById('adminGameSelector').value;
+            const game = storeData.games.find(g => g.id === gameId);
+            const tbody = document.getElementById('adminPackagesTableBody');
+            tbody.innerHTML = '';
+
+            if (!game) return;
+
+            game.packages.forEach((pkg, index) => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="p-3"><input type="text" value="${pkg.name}" id="pkgName_${gameId}_${index}" class="bg-slate-950 border border-slate-800 rounded px-2 py-1 text-white w-full"></td>
+                    <td class="p-3"><input type="number" step="0.01" value="${pkg.usd}" id="pkgUsd_${gameId}_${index}" class="bg-slate-950 border border-slate-800 rounded px-2 py-1 text-cyan-400 w-24"></td>
+                    <td class="p-3"><input type="text" value="${pkg.khr}" id="pkgKhr_${gameId}_${index}" class="bg-slate-950 border border-slate-800 rounded px-2 py-1 text-slate-300 w-32"></td>
+                    <td class="p-3 text-center">
+                        <button onclick="updatePackageData('${gameId}', ${index})" class="bg-blue-600 hover:bg-blue-500 text-white px-3 py-1 rounded text-xs font-bold">កែប្រែ</button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function updatePackageData(gameId, index) {
+            const game = storeData.games.find(g => g.id === gameId);
+            if (!game) return;
+
+            const newName = document.getElementById(`pkgName_${gameId}_${index}`).value;
+            const newUsd = parseFloat(document.getElementById(`pkgUsd_${gameId}_${index}`).value);
+            const newKhr = document.getElementById(`pkgKhr_${gameId}_${index}`).value;
+
+            game.packages[index].name = newName;
+            game.packages[index].usd = newUsd;
+            game.packages[index].khr = newKhr;
+
+            alert(`បានធ្វើបច្ចុប្បន្នភាពកញ្ចប់ "${newName}" រួចរាល់!`);
+        }
+    </script>
+</body>
+</html>
